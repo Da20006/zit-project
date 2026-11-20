@@ -84,7 +84,6 @@ body {
     transform: scale(1.02);
 }
 
-
 .miku-countdown {
     margin-top: 28px;
     background: var(--bg-dark-plate);
@@ -257,7 +256,6 @@ body {
     gap: 50px;
 }
 
-
 .character-col {
     flex: 1 1 50%;
     display: flex;
@@ -294,7 +292,6 @@ body {
 .miku-character:hover {
     transform: scale(1.025);
 }
-
 
 .buttons-col {
     flex: 1 1 50%;
@@ -334,7 +331,6 @@ body {
     text-shadow: 0 1px 2px rgba(255, 255, 255, 0.6), 0 2px 6px rgba(0, 0, 0, 0.15);
 }
 
-
 .miku-nav {
     display: flex;
     flex-direction: column;
@@ -358,7 +354,6 @@ body {
     transition: all 0.35s cubic-bezier(0.16, 1, 0.3, 1);
     backdrop-filter: blur(8px);
 }
-
 
 .miku-card-btn::before {
     content: '';
@@ -414,7 +409,6 @@ body {
     transition: all 0.35s ease;
 }
 
-
 .miku-card-btn:hover {
     transform: translateX(10px);
     background: var(--bg-dark-plate-hover);
@@ -447,7 +441,6 @@ body {
     transform: translateX(6px) scale(0.99);
 }
 
-
 .main-footer {
     padding: 30px 20px 40px;
     text-align: center;
@@ -477,7 +470,6 @@ body {
     color: var(--miku-teal-bright);
     text-shadow: 0 0 8px var(--miku-teal);
 }
-
 
 @keyframes fadeInDown {
     from {
@@ -533,7 +525,6 @@ body {
         gap: 36px;
     }
 
-    /* Časovač pro mobilní zařízení - zmenšený, aby byl menší než logo */
     .miku-countdown {
         max-width: 340px;
         width: 80%;

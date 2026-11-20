@@ -1,9 +1,4 @@
-/* ==========================================================================
-   Hatsune Miku Expo Europe 2026 - Tickets Stylesheet
-   Steampunk Theme x Miku Teal (#39c5bb)
-   ========================================================================== */
 
-/* Proměnné převzaté a rozšířené pro stránku lístků */
 :root {
     --miku-teal: #39c5bb;
     --miku-teal-bright: #5fe3d9;
@@ -22,16 +17,12 @@
     --text-dark: #2a221b;
 }
 
-/* Statická barva pozadí pro stránku lístků */
 body {
     background-color: #674d36;
     background-image: none;
     color: var(--text-light);
 }
 
-/* ==========================================================================
-   1. Fixní Tlačítko Zpět (PC: vlevo nahoře | Mobil: vlevo dole)
-   ========================================================================== */
 .back-button {
     position: fixed;
     top: 24px;
@@ -77,9 +68,6 @@ body {
     transform: translateX(-2px) scale(0.98);
 }
 
-/* ==========================================================================
-   2. Hlavička stránky Lístky
-   ========================================================================== */
 .tickets-page-header {
     padding: 70px 20px 30px;
     text-align: center;
@@ -124,9 +112,6 @@ body {
     max-width: 620px;
 }
 
-/* ==========================================================================
-   3. Hlavní obsah: Města a Koncerty
-   ========================================================================== */
 .tickets-main {
     padding: 20px 20px 80px;
 }
@@ -140,7 +125,6 @@ body {
     width: 100%;
 }
 
-/* Sekce města */
 .city-section {
     background: rgba(28, 23, 19, 0.85);
     border: 2px solid var(--steampunk-gold);
@@ -168,7 +152,6 @@ body {
     box-shadow: 0 16px 42px rgba(0, 0, 0, 0.55), 0 0 15px rgba(200, 150, 62, 0.2);
 }
 
-/* Záhlaví města */
 .city-heading-row {
     display: flex;
     justify-content: space-between;
@@ -212,14 +195,12 @@ body {
     border: 1px solid rgba(57, 197, 187, 0.35);
 }
 
-/* Kontejner pro koncerty daného města */
 .concerts-grid {
     display: flex;
     flex-direction: column;
     gap: 24px;
 }
 
-/* Karta jednoho koncertu */
 .concert-card {
     background: var(--bg-card-inner);
     border: 1px solid rgba(200, 150, 62, 0.4);
@@ -233,7 +214,6 @@ body {
     transition: all 0.3s ease;
 }
 
-/* Postranní tyrkysová linka koncertní karty */
 .concert-card::before {
     content: '';
     position: absolute;
@@ -256,7 +236,6 @@ body {
     width: 8px;
 }
 
-/* Horní část karty: Datum a Aréna */
 .concert-top {
     display: flex;
     justify-content: space-between;
@@ -309,7 +288,6 @@ body {
     letter-spacing: 0.5px;
 }
 
-/* Střední část karty: Časovač + Počasí */
 .concert-middle {
     display: grid;
     grid-template-columns: 1fr 1fr;
@@ -330,7 +308,6 @@ body {
     margin-bottom: 2px;
 }
 
-/* Blok časovače a text ukončeného představení */
 .concert-timer-block {
     display: flex;
     flex-direction: column;
@@ -349,7 +326,6 @@ body {
     text-shadow: 0 0 10px rgba(229, 190, 112, 0.3);
 }
 
-/* Mini časovač koncertu */
 .mini-countdown {
     display: flex;
     align-items: center;
@@ -393,7 +369,6 @@ body {
     margin-bottom: 10px;
 }
 
-/* Widget počasí */
 .weather-box {
     display: flex;
     align-items: center;
@@ -423,7 +398,6 @@ body {
     color: var(--text-muted);
 }
 
-/* Spodní část karty: Tlačítko na nákup lístků */
 .concert-bottom {
     display: flex;
     justify-content: flex-end;
@@ -472,7 +446,6 @@ body {
     transform: translateY(1px);
 }
 
-/* Tlačítko pro proběhlý koncert */
 .ticket-action-btn.already-happened,
 a.already-happened {
     background: linear-gradient(135deg, #58504a 0%, #3e3833 100%);
@@ -502,11 +475,7 @@ a.already-happened:hover .ticket-btn-arrow {
     transform: none;
 }
 
-/* ==========================================================================
-   4. Responzivní design (Mobilní zařízení)
-   ========================================================================== */
 @media (max-width: 768px) {
-    /* Tlačítko zpět fixnuto vlevo dole pro mobil */
     .back-button {
         top: auto;
         bottom: 22px;
@@ -560,7 +529,6 @@ a.already-happened:hover .ticket-btn-arrow {
         text-align: left;
     }
 
-    /* Časovač a počasí pod sebou */
     .concert-middle {
         grid-template-columns: 1fr;
         gap: 16px;
@@ -606,9 +574,6 @@ a.already-happened:hover .ticket-btn-arrow {
     }
 }
 
-/* ==========================================================================
-   5. Indikátor načítání (Loading State)
-   ========================================================================== */
 .tickets-loading {
     display: flex;
     flex-direction: column;
@@ -642,7 +607,6 @@ a.already-happened:hover .ticket-btn-arrow {
     background: linear-gradient(90deg, transparent, var(--miku-teal), transparent);
 }
 
-/* Steampunk dvojitý zářící spinner */
 .loading-spinner {
     width: 64px;
     height: 64px;
@@ -721,9 +685,6 @@ a.already-happened:hover .ticket-btn-arrow {
     }
 }
 
-/* ==========================================================================
-   5. Chybová hláška (Error State)
-   ========================================================================== */
 .tickets-error-card {
     display: flex;
     flex-direction: column;
@@ -763,7 +724,6 @@ a.already-happened:hover .ticket-btn-arrow {
     width: 100%;
 }
 
-/* Obrázek s ohnutými okraji a zlatým rámečkem */
 .error-chara-img {
     width: 100%;
     max-width: 220px;
