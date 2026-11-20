@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="cs">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Miku Expo Europe 2026 CZ</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@600;700;800&family=Montserrat:wght@400;500;600;700;800&display=swap"
+          rel="stylesheet">
+    <link rel="stylesheet" href="assets/css/main.css">
+</head>
+
+<body>
+<header>
+    <h1 class="main-title-hidden">Miku Expo Europe 2026</h1>
+</header>
+
+<main>
+    <section class="main-logo-center">
+        <div class="hero-content">
+            <img class="miku-expo-logo" alt="Hatsune Miku Expo Europe 2026 Logo" src="assets/images/hero_logo.svg">
+
+            <div class="miku-countdown" id="countdown" aria-label="Odpočet času"> <!-- zde pak tour-ended -->
+                <div class="countdown-units">
+                    <div class="countdown-item">
+                        <span id="days" class="countdown-value">XX</span>
+                        <span class="countdown-label">Dny</span>
+                    </div>
+                    <span class="countdown-separator" aria-hidden="true">:</span>
+                    <div class="countdown-item">
+                        <span id="hours" class="countdown-value">XX</span>
+                        <span class="countdown-label">Hodiny</span>
+                    </div>
+                    <span class="countdown-separator" aria-hidden="true">:</span>
+                    <div class="countdown-item">
+                        <span id="minutes" class="countdown-value">XX</span>
+                        <span class="countdown-label">Minuty</span>
+                    </div>
+                    <span class="countdown-separator" aria-hidden="true">:</span>
+                    <div class="countdown-item">
+                        <span id="seconds" class="countdown-value">XX</span>
+                        <span class="countdown-label">Vteřiny</span>
+                    </div>
+                </div>
+                <div class="countdown-ended">
+                    <span class="ended-badge">KONEC</span>
+                    <p class="ended-desc">Děkujeme všem fanouškům!</p>
+                </div>
+            </div>
+
+            <a class="button-miku-main" href="#main-menu" aria-label="Přejít do menu">
+                <span class="btn-text">Hlavní menu</span>
+                <span class="scroll-arrow" aria-hidden="true">↓</span>
+            </a>
+        </div>
+    </section>
+
+    <section id="main-menu" class="main-menu-section">
+        <div class="menu-container">
+            <div class="character-col">
+                <div class="chara-glow"></div>
+                <img class="miku-character" src="assets/images/hero_chara-2.webp"
+                     alt="Hatsune Miku - Miku Expo Europe 2026">
+            </div>
+
+            <div class="buttons-col">
+                <div class="menu-header">
+                    <span class="menu-tag">EUROPE TOUR 2026</span>
+                    <h2 class="menu-heading">HLAVNÍ MENU</h2>
+                </div>
+
+                <nav class="miku-nav">
+                    <a href="/about" class="miku-card-btn">
+                        <div class="btn-info">
+                            <span class="btn-sub">ABOUT</span>
+                            <span class="btn-title">Co je to Hatsune Miku</span>
+                        </div>
+                        <span class="btn-arrow" aria-hidden="true">→</span>
+                    </a>
+
+                    <a href="/tickets" class="miku-card-btn">
+                        <div class="btn-info">
+                            <span class="btn-sub">TICKETS</span>
+                            <span class="btn-title">Lístky</span>
+                        </div>
+                        <span class="btn-arrow" aria-hidden="true">→</span>
+                    </a>
+
+                    <a href="/general-info" class="miku-card-btn">
+                        <div class="btn-info">
+                            <span class="btn-sub">GENERAL INFO</span>
+                            <span class="btn-title">Všeobecné info</span>
+                        </div>
+                        <span class="btn-arrow" aria-hidden="true">→</span>
+                    </a>
+                </nav>
+            </div>
+        </div>
+    </section>
+</main>
+
+<footer class="main-footer">
+    <p>Všechna práva patří © Crypton Future Media, INC. Obrázek vytvořil <a href="https://x.com/suzu3939"
+                                                                            target="_blank" rel="noopener noreferrer">suzunosuke</a>
+    </p>
+</footer>
+
+<script src="/assets/js/main.js"></script>
+</body>
+
+</html>

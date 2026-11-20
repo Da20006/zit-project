@@ -1,0 +1,840 @@
+/* ==========================================================================
+   Hatsune Miku Expo Europe 2026 - Tickets Stylesheet
+   Steampunk Theme x Miku Teal (#39c5bb)
+   ========================================================================== */
+
+/* Proměnné převzaté a rozšířené pro stránku lístků */
+:root {
+    --miku-teal: #39c5bb;
+    --miku-teal-bright: #5fe3d9;
+    --miku-teal-dark: #1e8780;
+    --miku-teal-glow: rgba(57, 197, 187, 0.45);
+
+    --steampunk-gold: #c8963e;
+    --steampunk-gold-light: #e5be70;
+    --steampunk-gold-dark: #8c6523;
+
+    --bg-dark-plate: rgba(28, 23, 19, 0.92);
+    --bg-card-inner: rgba(20, 16, 13, 0.7);
+
+    --text-light: #fdfaf6;
+    --text-muted: #d0c2b2;
+    --text-dark: #2a221b;
+}
+
+/* Statická barva pozadí pro stránku lístků */
+body {
+    background-color: #674d36;
+    background-image: none;
+    color: var(--text-light);
+}
+
+/* ==========================================================================
+   1. Fixní Tlačítko Zpět (PC: vlevo nahoře | Mobil: vlevo dole)
+   ========================================================================== */
+.back-button {
+    position: fixed;
+    top: 24px;
+    left: 24px;
+    z-index: 1000;
+    display: inline-flex;
+    align-items: center;
+    gap: 10px;
+    padding: 10px 20px;
+    background: var(--bg-dark-plate);
+    border: 2px solid var(--steampunk-gold);
+    border-radius: 50px;
+    color: var(--text-light);
+    font-size: 0.95rem;
+    font-weight: 700;
+    letter-spacing: 1px;
+    text-decoration: none;
+    text-transform: uppercase;
+    backdrop-filter: blur(10px);
+    box-shadow: 0 6px 20px rgba(0, 0, 0, 0.45), 0 0 10px rgba(200, 150, 62, 0.2);
+    transition: all 0.3s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+.back-button .back-arrow {
+    font-size: 1.25rem;
+    color: var(--miku-teal-bright);
+    transition: transform 0.3s ease;
+}
+
+.back-button:hover {
+    background: rgba(38, 30, 24, 0.98);
+    border-color: var(--miku-teal);
+    color: #ffffff;
+    box-shadow: 0 8px 25px rgba(0, 0, 0, 0.6), 0 0 18px var(--miku-teal-glow);
+    transform: translateX(-4px);
+}
+
+.back-button:hover .back-arrow {
+    transform: translateX(-3px);
+}
+
+.back-button:active {
+    transform: translateX(-2px) scale(0.98);
+}
+
+/* ==========================================================================
+   2. Hlavička stránky Lístky
+   ========================================================================== */
+.tickets-page-header {
+    padding: 70px 20px 30px;
+    text-align: center;
+}
+
+.header-container {
+    max-width: 800px;
+    margin: 0 auto;
+    animation: fadeInDown 0.8s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+.header-tag {
+    display: inline-block;
+    font-family: 'Cinzel', serif;
+    font-size: 0.85rem;
+    font-weight: 700;
+    letter-spacing: 3px;
+    color: var(--steampunk-gold-light);
+    background: rgba(43, 33, 24, 0.8);
+    padding: 6px 16px;
+    border-radius: 4px;
+    border: 1px solid rgba(200, 150, 62, 0.45);
+    margin-bottom: 12px;
+    text-transform: uppercase;
+}
+
+.header-title {
+    margin: 8px 0 12px;
+    font-family: 'Cinzel', serif;
+    font-size: 3.2rem;
+    font-weight: 800;
+    color: var(--text-light);
+    letter-spacing: 3px;
+    text-shadow: 0 2px 8px rgba(0, 0, 0, 0.4), 0 0 20px rgba(200, 150, 62, 0.35);
+}
+
+.header-desc {
+    margin: 0 auto;
+    font-size: 1.05rem;
+    color: #ebdccb;
+    line-height: 1.6;
+    max-width: 620px;
+}
+
+/* ==========================================================================
+   3. Hlavní obsah: Města a Koncerty
+   ========================================================================== */
+.tickets-main {
+    padding: 20px 20px 80px;
+}
+
+.tickets-container {
+    max-width: 1050px;
+    margin: 0 auto;
+    display: flex;
+    flex-direction: column;
+    gap: 40px;
+    width: 100%;
+}
+
+/* Sekce města */
+.city-section {
+    background: rgba(28, 23, 19, 0.85);
+    border: 2px solid var(--steampunk-gold);
+    border-radius: 16px;
+    padding: 28px 32px;
+    box-shadow: 0 12px 36px rgba(0, 0, 0, 0.45), inset 0 1px 0 rgba(255, 255, 255, 0.08);
+    backdrop-filter: blur(10px);
+    position: relative;
+    overflow: hidden;
+    transition: border-color 0.3s ease, box-shadow 0.3s ease;
+}
+
+.city-section::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 10%;
+    right: 10%;
+    height: 2px;
+    background: linear-gradient(90deg, transparent, var(--miku-teal), transparent);
+}
+
+.city-section:hover {
+    border-color: rgba(229, 190, 112, 0.9);
+    box-shadow: 0 16px 42px rgba(0, 0, 0, 0.55), 0 0 15px rgba(200, 150, 62, 0.2);
+}
+
+/* Záhlaví města */
+.city-heading-row {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border-bottom: 1px solid rgba(200, 150, 62, 0.35);
+    padding-bottom: 16px;
+    margin-bottom: 24px;
+}
+
+.city-badge-wrapper {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+}
+
+.city-pin {
+    font-size: 1.6rem;
+    filter: drop-shadow(0 2px 6px rgba(0, 0, 0, 0.4));
+}
+
+.city-name {
+    margin: 0;
+    font-family: 'Cinzel', serif;
+    font-size: 2rem;
+    font-weight: 800;
+    letter-spacing: 2px;
+    color: var(--steampunk-gold-light);
+    text-shadow: 0 2px 6px rgba(0, 0, 0, 0.5);
+}
+
+.city-country {
+    font-family: 'Cinzel', serif;
+    font-size: 0.85rem;
+    font-weight: 700;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+    color: var(--miku-teal-bright);
+    background: rgba(14, 38, 36, 0.7);
+    padding: 6px 14px;
+    border-radius: 20px;
+    border: 1px solid rgba(57, 197, 187, 0.35);
+}
+
+/* Kontejner pro koncerty daného města */
+.concerts-grid {
+    display: flex;
+    flex-direction: column;
+    gap: 24px;
+}
+
+/* Karta jednoho koncertu */
+.concert-card {
+    background: var(--bg-card-inner);
+    border: 1px solid rgba(200, 150, 62, 0.4);
+    border-radius: 12px;
+    padding: 22px 26px;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    position: relative;
+    overflow: hidden;
+    transition: all 0.3s ease;
+}
+
+/* Postranní tyrkysová linka koncertní karty */
+.concert-card::before {
+    content: '';
+    position: absolute;
+    left: 0;
+    top: 0;
+    bottom: 0;
+    width: 5px;
+    background: linear-gradient(to bottom, var(--miku-teal-bright), var(--miku-teal-dark));
+    box-shadow: 0 0 8px var(--miku-teal);
+    transition: width 0.3s ease;
+}
+
+.concert-card:hover {
+    border-color: var(--miku-teal);
+    background: rgba(28, 22, 17, 0.85);
+    box-shadow: 0 8px 24px rgba(0, 0, 0, 0.45), 0 0 16px var(--miku-teal-glow);
+}
+
+.concert-card:hover::before {
+    width: 8px;
+}
+
+/* Horní část karty: Datum a Aréna */
+.concert-top {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    flex-wrap: wrap;
+    gap: 16px;
+}
+
+.concert-date-group {
+    display: flex;
+    flex-direction: column;
+    gap: 4px;
+}
+
+.date-day {
+    font-family: 'Cinzel', serif;
+    font-size: 1.35rem;
+    font-weight: 700;
+    color: var(--text-light);
+    letter-spacing: 0.5px;
+}
+
+.date-times {
+    font-size: 0.85rem;
+    color: var(--text-muted);
+    letter-spacing: 0.3px;
+}
+
+.venue-info {
+    text-align: right;
+    display: flex;
+    flex-direction: column;
+    gap: 2px;
+}
+
+.venue-label {
+    font-family: 'Cinzel', serif;
+    font-size: 0.7rem;
+    font-weight: 700;
+    letter-spacing: 2px;
+    color: var(--steampunk-gold-light);
+    text-transform: uppercase;
+}
+
+.venue-name {
+    margin: 0;
+    font-size: 1.25rem;
+    font-weight: 700;
+    color: var(--miku-teal-bright);
+    letter-spacing: 0.5px;
+}
+
+/* Střední část karty: Časovač + Počasí */
+.concert-middle {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 16px;
+    padding: 14px 18px;
+    background: rgba(12, 10, 8, 0.6);
+    border-radius: 10px;
+    border: 1px solid rgba(255, 255, 255, 0.06);
+}
+
+.block-label {
+    display: block;
+    font-family: 'Cinzel', serif;
+    font-size: 0.68rem;
+    font-weight: 700;
+    letter-spacing: 1.8px;
+    color: var(--steampunk-gold-light);
+    margin-bottom: 2px;
+}
+
+/* Blok časovače a text ukončeného představení */
+.concert-timer-block {
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+}
+
+.timer-ended-text {
+    display: flex;
+    align-items: center;
+    flex: 1;
+    min-height: 48px;
+    font-size: 1.05rem;
+    font-weight: 700;
+    color: var(--steampunk-gold-light);
+    letter-spacing: 0.5px;
+    text-shadow: 0 0 10px rgba(229, 190, 112, 0.3);
+}
+
+/* Mini časovač koncertu */
+.mini-countdown {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+}
+
+.mini-unit {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background: rgba(28, 23, 19, 0.8);
+    border: 1px solid rgba(200, 150, 62, 0.35);
+    border-radius: 6px;
+    padding: 4px 8px;
+    min-width: 44px;
+}
+
+.mini-val {
+    font-family: 'Cinzel', monospace, sans-serif;
+    font-size: 1.25rem;
+    font-weight: 800;
+    color: var(--miku-teal-bright);
+    line-height: 1;
+    text-shadow: 0 0 10px var(--miku-teal-glow);
+}
+
+.mini-lbl {
+    font-size: 0.6rem;
+    font-weight: 700;
+    color: var(--text-muted);
+    text-transform: uppercase;
+    margin-top: 2px;
+}
+
+.mini-sep {
+    font-family: 'Cinzel', serif;
+    font-size: 1.2rem;
+    font-weight: 700;
+    color: var(--steampunk-gold);
+    line-height: 1;
+    margin-bottom: 10px;
+}
+
+/* Widget počasí */
+.weather-box {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    height: 100%;
+}
+
+.weather-icon {
+    font-size: 1.8rem;
+    filter: drop-shadow(0 2px 6px rgba(0, 0, 0, 0.4));
+}
+
+.weather-text {
+    display: flex;
+    flex-direction: column;
+    gap: 2px;
+}
+
+.weather-temp {
+    font-size: 1.15rem;
+    font-weight: 700;
+    color: var(--text-light);
+}
+
+.weather-desc {
+    font-size: 0.82rem;
+    color: var(--text-muted);
+}
+
+/* Spodní část karty: Tlačítko na nákup lístků */
+.concert-bottom {
+    display: flex;
+    justify-content: flex-end;
+    margin-top: 4px;
+}
+
+.ticket-action-btn {
+    all: unset;
+    cursor: pointer;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    gap: 12px;
+    padding: 13px 28px;
+    background: linear-gradient(135deg, var(--miku-teal) 0%, var(--miku-teal-dark) 100%);
+    color: #08211f;
+    font-size: 0.95rem;
+    font-weight: 800;
+    letter-spacing: 1.5px;
+    text-transform: uppercase;
+    text-decoration: none;
+    border-radius: 50px;
+    border: 1.5px solid rgba(255, 255, 255, 0.6);
+    box-shadow: 0 6px 18px var(--miku-teal-glow), 0 2px 6px rgba(0, 0, 0, 0.25);
+    transition: all 0.3s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+.ticket-action-btn .ticket-btn-arrow {
+    font-size: 1.15rem;
+    transition: transform 0.3s ease;
+}
+
+.ticket-action-btn:hover {
+    background: linear-gradient(135deg, var(--miku-teal-bright) 0%, var(--miku-teal) 100%);
+    color: #031513;
+    transform: translateY(-2px);
+    box-shadow: 0 10px 26px rgba(57, 197, 187, 0.65), 0 4px 10px rgba(0, 0, 0, 0.3);
+    border-color: #ffffff;
+}
+
+.ticket-action-btn:hover .ticket-btn-arrow {
+    transform: translateX(4px);
+}
+
+.ticket-action-btn:active {
+    transform: translateY(1px);
+}
+
+/* Tlačítko pro proběhlý koncert */
+.ticket-action-btn.already-happened,
+a.already-happened {
+    background: linear-gradient(135deg, #58504a 0%, #3e3833 100%);
+    color: #b8aea5;
+    border: 1.5px solid rgba(160, 150, 140, 0.4);
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.3);
+    cursor: not-allowed;
+    opacity: 0.85;
+}
+
+.ticket-action-btn.already-happened .ticket-btn-arrow,
+a.already-happened .ticket-btn-arrow {
+    color: #9c9187;
+}
+
+.ticket-action-btn.already-happened:hover,
+a.already-happened:hover {
+    background: linear-gradient(135deg, #635b54 0%, #463f39 100%);
+    color: #cfc6bd;
+    border-color: rgba(180, 170, 160, 0.55);
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.4);
+    transform: none;
+}
+
+.ticket-action-btn.already-happened:hover .ticket-btn-arrow,
+a.already-happened:hover .ticket-btn-arrow {
+    transform: none;
+}
+
+/* ==========================================================================
+   4. Responzivní design (Mobilní zařízení)
+   ========================================================================== */
+@media (max-width: 768px) {
+    /* Tlačítko zpět fixnuto vlevo dole pro mobil */
+    .back-button {
+        top: auto;
+        bottom: 22px;
+        left: 20px;
+        padding: 12px 22px;
+        font-size: 0.9rem;
+        box-shadow: 0 8px 26px rgba(0, 0, 0, 0.7), 0 0 15px rgba(57, 197, 187, 0.35);
+    }
+
+    .tickets-page-header {
+        padding: 50px 16px 20px;
+    }
+
+    .header-title {
+        font-size: 2.3rem;
+    }
+
+    .header-desc {
+        font-size: 0.95rem;
+    }
+
+    .city-section {
+        padding: 20px 18px;
+    }
+
+    .city-heading-row {
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 8px;
+    }
+
+    .city-name {
+        font-size: 1.6rem;
+    }
+
+    .city-country {
+        align-self: flex-start;
+    }
+
+    .concert-card {
+        padding: 18px 16px;
+    }
+
+    .concert-top {
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 8px;
+    }
+
+    .venue-info {
+        text-align: left;
+    }
+
+    /* Časovač a počasí pod sebou */
+    .concert-middle {
+        grid-template-columns: 1fr;
+        gap: 16px;
+        padding: 12px 14px;
+    }
+
+    .concert-bottom {
+        justify-content: stretch;
+    }
+
+    .ticket-action-btn {
+        width: 100%;
+        text-align: center;
+        box-sizing: border-box;
+    }
+}
+
+@media (max-width: 480px) {
+    .header-title {
+        font-size: 1.95rem;
+    }
+
+    .mini-countdown {
+        gap: 5px;
+    }
+
+    .mini-unit {
+        min-width: 36px;
+        padding: 3px 5px;
+    }
+
+    .mini-val {
+        font-size: 1.05rem;
+    }
+
+    .mini-lbl {
+        font-size: 0.52rem;
+    }
+
+    .mini-sep {
+        font-size: 1rem;
+        margin-bottom: 8px;
+    }
+}
+
+/* ==========================================================================
+   5. Indikátor načítání (Loading State)
+   ========================================================================== */
+.tickets-loading {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    gap: 22px;
+    background: var(--bg-dark-plate);
+    border: 2px solid var(--steampunk-gold);
+    border-radius: 18px;
+    padding: 50px 32px;
+    width: 100%;
+    max-width: 520px;
+    margin: 30px auto;
+    align-self: center;
+    box-shadow: 0 12px 36px rgba(0, 0, 0, 0.45);
+    backdrop-filter: blur(10px);
+    position: relative;
+    overflow: hidden;
+    animation: fadeInDown 0.6s cubic-bezier(0.16, 1, 0.3, 1);
+    margin-bottom: 100px;
+}
+
+.tickets-loading::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 15%;
+    right: 15%;
+    height: 2px;
+    background: linear-gradient(90deg, transparent, var(--miku-teal), transparent);
+}
+
+/* Steampunk dvojitý zářící spinner */
+.loading-spinner {
+    width: 64px;
+    height: 64px;
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.loading-spinner::before {
+    content: '';
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    border-radius: 50%;
+    border: 3px solid rgba(200, 150, 62, 0.2);
+    border-top-color: var(--steampunk-gold-light);
+    border-bottom-color: var(--steampunk-gold);
+    animation: spinClockwise 2.6s linear infinite;
+}
+
+.loading-spinner::after {
+    content: '';
+    position: absolute;
+    width: 68%;
+    height: 68%;
+    border-radius: 50%;
+    border: 3px solid transparent;
+    border-left-color: var(--miku-teal);
+    border-right-color: var(--miku-teal-bright);
+    box-shadow: 0 0 14px var(--miku-teal-glow);
+    animation: spinCounterClockwise 1.3s cubic-bezier(0.68, -0.55, 0.27, 1.55) infinite;
+}
+
+.loading-content {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    width: 100%;
+}
+
+.loading-title {
+    margin: 0 0 8px;
+    font-family: 'Cinzel', serif;
+    font-size: 1.6rem;
+    font-weight: 800;
+    color: var(--text-light);
+    letter-spacing: 1.5px;
+}
+
+.loading-desc {
+    margin: 0 auto;
+    font-size: 0.92rem;
+    color: var(--text-muted);
+    line-height: 1.5;
+    max-width: 400px;
+    letter-spacing: 0.3px;
+}
+
+@keyframes spinClockwise {
+    from {
+        transform: rotate(0deg);
+    }
+    to {
+        transform: rotate(360deg);
+    }
+}
+
+@keyframes spinCounterClockwise {
+    from {
+        transform: rotate(0deg);
+    }
+    to {
+        transform: rotate(-360deg);
+    }
+}
+
+/* ==========================================================================
+   5. Chybová hláška (Error State)
+   ========================================================================== */
+.tickets-error-card {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    align-self: center;
+    gap: 20px;
+    background: var(--bg-dark-plate);
+    border: 2px solid var(--steampunk-gold);
+    border-radius: 18px;
+    padding: 40px 28px;
+    width: 100%;
+    max-width: 580px;
+    margin: 20px auto;
+    box-shadow: 0 12px 36px rgba(0, 0, 0, 0.45);
+    backdrop-filter: blur(10px);
+    position: relative;
+    overflow: hidden;
+    animation: fadeInDown 0.6s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+.tickets-error-card::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 15%;
+    right: 15%;
+    height: 2px;
+    background: linear-gradient(90deg, transparent, #ff7b7b, transparent);
+}
+
+.error-img-wrapper {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+}
+
+/* Obrázek s ohnutými okraji a zlatým rámečkem */
+.error-chara-img {
+    width: 100%;
+    max-width: 220px;
+    height: auto;
+    display: block;
+    margin: 0 auto;
+    border-radius: 20px;
+    border: 3px solid var(--steampunk-gold);
+    box-shadow: 0 8px 24px rgba(0, 0, 0, 0.55), 0 0 14px rgba(200, 150, 62, 0.3);
+    object-fit: cover;
+}
+
+.error-content {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    width: 100%;
+}
+
+.error-tag {
+    display: inline-block;
+    font-family: 'Cinzel', serif;
+    font-size: 0.75rem;
+    font-weight: 700;
+    letter-spacing: 2px;
+    color: #ff9e9e;
+    background: rgba(85, 25, 25, 0.7);
+    padding: 5px 14px;
+    border-radius: 20px;
+    border: 1px solid rgba(255, 120, 120, 0.45);
+    margin: 0 auto 10px auto;
+    text-transform: uppercase;
+}
+
+.error-title {
+    margin: 0 0 10px;
+    font-family: 'Cinzel', serif;
+    font-size: 1.85rem;
+    font-weight: 800;
+    color: var(--text-light);
+    letter-spacing: 1px;
+    text-align: center;
+    width: 100%;
+}
+
+.error-desc {
+    margin: 0 auto;
+    font-size: 0.95rem;
+    color: var(--text-muted);
+    line-height: 1.6;
+    max-width: 440px;
+    text-align: center;
+}
+
+@media (max-width: 480px) {
+    .tickets-error-card {
+        padding: 30px 18px;
+    }
+
+    .error-chara-img {
+        max-width: 170px;
+        border-radius: 16px;
+    }
+
+    .error-title {
+        font-size: 1.45rem;
+    }
+
+    .error-desc {
+        font-size: 0.85rem;
+    }
+}

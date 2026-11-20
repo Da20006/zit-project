@@ -1,0 +1,122 @@
+[
+  {
+    "name": "London",
+    "state": "GB",
+    "concerts": [
+      {
+        "date": "2026-11-12",
+        "venue": "The O2 Arena",
+        "starting_time": "20:00",
+        "open_door_time": "18:30",
+        "vip_open_door_time": "17:30",
+        "ticket_site": "https://www.livenation.co.uk/hatsune-miku-tickets-adp1631264"
+      }
+    ]
+  },
+  {
+    "name": "Brussels",
+    "state": "BE",
+    "concerts": [
+      {
+        "date": "2026-11-14",
+        "venue": "ING Arena",
+        "starting_time": "20:00",
+        "open_door_time": "18:30",
+        "vip_open_door_time": "17:30",
+        "ticket_site": "https://www.ticketmaster.be/artist/hatsune-miku-tickets/943109?venueId=17"
+      }
+    ]
+  },
+  {
+    "name": "Amsterdam",
+    "state": "NL",
+    "concerts": [
+      {
+        "date": "2026-11-15",
+        "venue": "AFAS Live",
+        "starting_time": "20:00",
+        "open_door_time": "18:30",
+        "vip_open_door_time": "17:30",
+        "ticket_site": "https://www.ticketmaster.nl/artist/hatsune-miku-tickets/943109?venueId=4247"
+      }
+    ]
+  },
+  {
+    "name": "Berlin",
+    "state": "DE",
+    "concerts": [
+      {
+        "date": "2026-11-17",
+        "venue": "Velodrom",
+        "starting_time": "20:00",
+        "open_door_time": "18:30",
+        "vip_open_door_time": "17:30",
+        "ticket_site": "https://www.livenation.de/初音ミク-hatsune-miku-tickets-adp871913"
+      }
+    ]
+  },
+  {
+    "name": "Düsseldorf",
+    "state": "DE",
+    "concerts": [
+      {
+        "date": "2026-11-20",
+        "venue": "PSD Bank Dome",
+        "starting_time": "20:00",
+        "open_door_time": "18:30",
+        "vip_open_door_time": "17:30",
+        "ticket_site": "https://www.livenation.de/初音ミク-hatsune-miku-tickets-adp871913"
+      }
+    ]
+  },
+  {
+    "name": "Paris",
+    "state": "FR",
+    "concerts": [
+      {
+        "date": "2026-11-22",
+        "venue": "Accor Arena",
+        "starting_time": "20:00",
+        "open_door_time": "18:30",
+        "vip_open_door_time": "17:30",
+        "ticket_site": "https://www.aegpresents.fr/event/hatsune-miku/"
+      }
+    ]
+  },
+  {
+    "name": "Madrid",
+    "state": "ES",
+    "concerts": [
+      {
+        "date": "2026-11-24",
+        "venue": "Palacio Vistalegre",
+        "starting_time": "20:00",
+        "open_door_time": "18:30",
+        "vip_open_door_time": "17:30",
+        "ticket_site": "https://www.livenation.es/show/1664868"
+      },
+      {
+        "date": "2026-11-25",
+        "venue": "Palacio Vistalegre",
+        "starting_time": "20:00",
+        "open_door_time": "18:30",
+        "vip_open_door_time": "17:30",
+        "ticket_site": "https://www.livenation.es/show/1664868"
+      }
+    ]
+  },
+  {
+    "name": "Lisbon",
+    "state": "PT",
+    "concerts": [
+      {
+        "date": "2026-11-27",
+        "venue": "Sagres Campo Pequeno",
+        "starting_time": "20:00",
+        "open_door_time": "18:30",
+        "vip_open_door_time": "17:30",
+        "ticket_site": "https://www.ticketline.pt/evento/102520"
+      }
+    ]
+  }
+]
